@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | Portfólio Pixel Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="./css/output.css" rel="stylesheet">
+    <!-- Espaço para futuras bibliotecas de animação como GSAP, AOS ou Framer Motion -->
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-pixel-light border-b-6 border-double border-pixel-dark">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="font-pixel text-xl text-pixel-primary">
+                <span class="animate-pixel-glitch inline-block">DEV</span><span class="text-pixel-dark">PIXEL</span>
+            </a>
+            <div class="hidden md:flex space-x-4">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">Sobre</a>
+                <a href="projects.html" class="nav-link">Projetos</a>
+                <a href="contact.html" class="nav-link">Contato</a>
+            </div>
+            <button class="md:hidden px-2 py-1 pixel-border" id="mobile-menu-button">
+                <div class="w-6 h-0.5 bg-pixel-dark mb-1"></div>
+                <div class="w-6 h-0.5 bg-pixel-dark mb-1"></div>
+                <div class="w-6 h-0.5 bg-pixel-dark"></div>
+            </button>
+        </nav>
+        <!-- Menu mobile -->
+        <div class="hidden md:hidden bg-pixel-light border-t-3 border-dashed border-pixel-dark" id="mobile-menu">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+                <a href="index.html" class="nav-link block py-2">Home</a>
+                <a href="about.html" class="nav-link block py-2">Sobre</a>
+                <a href="projects.html" class="nav-link block py-2">Projetos</a>
+                <a href="contact.html" class="nav-link block py-2">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <section class="max-w-6xl mx-auto">
+            <h1 class="pixel-heading text-2xl md:text-4xl mb-8 text-center">Meus Projetos</h1>
+            
+            <p class="text-center max-w-3xl mx-auto mb-12">
+                Aqui estão alguns dos projetos que desenvolvi. Cada um representa um desafio superado e novas habilidades adquiridas. Clique nos links para ver mais detalhes!
+            </p>
+            
+            <!-- Grid de projetos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
+                <!-- Projeto 1 -->
+                <div class="pixel-card group">
+                    <div class="bg-pixel-primary h-48 mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="text-white font-pixel text-center p-4 group-hover:scale-110 transition-transform duration-300" aria-label="Screenshot do projeto App de Tarefas">
+                            PROJETO 1<br>SCREENSHOT
+                        </div>
+                    </div>
+                    <h3 class="font-pixel text-lg mb-2 text-pixel-primary">App de Tarefas</h3>
+                    <p class="mb-4">Um aplicativo de gerenciamento de tarefas com interface intuitiva e recursos de organização avançados.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">React</span>
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">Node.js</span>
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">MongoDB</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-pixel-primary hover:text-pixel-dark transition-colors font-pixel text-sm">GitHub</a>
+                        <a href="#" class="text-pixel-primary hover:text-pixel-dark transition-colors font-pixel text-sm">Demo</a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="pixel-card group">
+                    <div class="bg-pixel-accent h-48 mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="text-pixel-dark font-pixel text-center p-4 group-hover:scale-110 transition-transform duration-300" aria-label="Screenshot do projeto E-commerce">
+                            PROJETO 2<br>SCREENSHOT
+                        </div>
+                    </div>
+                    <h3 class="font-pixel text-lg mb-2 text-pixel-primary">E-commerce</h3>
+                    <p class="mb-4">Plataforma completa de e-commerce com carrinho de compras, pagamentos e painel administrativo.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">Next.js</span>
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">Stripe</span>
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">PostgreSQL</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-pixel-primary hover:text-pixel-dark transition-colors font-pixel text-sm">GitHub</a>
+                        <a href="#" class="text-pixel-primary hover:text-pixel-dark transition-colors font-pixel text-sm">Demo</a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 3 -->
+                <div class="pixel-card group">
+                    <div class="bg-pixel-secondary h-48 mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="text-white font-pixel text-center p-4 group-hover:scale-110 transition-transform duration-300">
+                            PROJETO 3<br>SCREENSHOT
+                        </div>
+                    </div>
+                    <h3 class="font-pixel text-lg mb-2 text-pixel-primary">Blog Pessoal</h3>
+                    <p class="mb-4">Blog com sistema de gerenciamento de conteúdo, comentários e categorização de artigos.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">Vue.js</span>
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">Express</span>
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">MySQL</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-pixel-primary hover:text-pixel-dark transition-colors font-pixel text-sm">GitHub</a>
+                        <a href="#" class="text-pixel-primary hover:text-pixel-dark transition-colors font-pixel text-sm">Demo</a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 4 -->
+                <div class="pixel-card group">
+                    <div class="bg-pixel-dark h-48 mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="text-white font-pixel text-center p-4 group-hover:scale-110 transition-transform duration-300">
+                            PROJETO 4<br>SCREENSHOT
+                        </div>
+                    </div>
+                    <h3 class="font-pixel text-lg mb-2 text-pixel-primary">App de Clima</h3>
+                    <p class="mb-4">Aplicativo de previsão do tempo com geolocalização e visualização de dados meteorológicos.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">JavaScript</span>
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">API OpenWeather</span>
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">Chart.js</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-pixel-primary hover:text-pixel-dark transition-colors font-pixel text-sm">GitHub</a>
+                        <a href="#" class="text-pixel-primary hover:text-pixel-dark transition-colors font-pixel text-sm">Demo</a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 5 -->
+                <div class="pixel-card group">
+                    <div class="bg-pixel-primary h-48 mb-4 flex items-center justify-center overflow-hidden">
+                        <div class="text-white font-pixel text-center p-4 group-hover:scale-110 transition-transform duration-300">
+                            PROJETO 5<br>SCREENSHOT
+                        </div>
+                    </div>
+                    <h3 class="font-pixel text-lg mb-2 text-pixel-primary">Jogo da Memória</h3>
+                    <p class="mb-4">Jogo da memória com tema pixel art, contagem de tempo e sistema de pontuação.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">HTML5</span>
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">CSS3</span>
+                        <span class="bg-pixel-secondary text-white px-2 py-1 text-xs">JavaScript</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-pixel-primary hover:text-pixel-dark transition-colors font-pixel text-sm">GitHub</a>
+                        <a href="#" class="text-pixel-primary hover:text-pixel-dark transition-colors font-pixel text-sm">Demo</a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 6 (Placeholder para futuros projetos) -->
+                <div class="pixel-card border-dashed flex flex-col items-center justify-center h-full">
+                    <div class="text-pixel-dark font-pixel text-center mb-4">
+                        NOVO PROJETO<br>EM BREVE
+                    </div>
+                    <p class="text-center mb-4">Espaço reservado para futuros projetos. Fique ligado!</p>
+                    <div class="animate-pixel-pulse">
+                        <div class="w-12 h-12 border-4 border-dashed border-pixel-primary rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chamada para ação -->
+            <div class="text-center">
+                <p class="mb-6">Interessado em ver mais projetos ou colaborar em algo novo?</p>
+                <a href="contact.html" class="pixel-button">Entre em contato</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-pixel-dark text-white py-6 border-t-6 border-double border-pixel-primary">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-pixel text-sm">Feito com ❤️ e muito café pixelado</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-pixel-accent hover:text-pixel-primary transition-colors">
+                    <!-- Ícone GitHub -->
+                    <span class="font-pixel text-xs">GH</span>
+                </a>
+                <a href="#" class="text-pixel-accent hover:text-pixel-primary transition-colors">
+                    <!-- Ícone LinkedIn -->
+                    <span class="font-pixel text-xs">IN</span>
+                </a>
+                <a href="#" class="text-pixel-accent hover:text-pixel-primary transition-colors">
+                    <!-- Ícone Email -->
+                    <span class="font-pixel text-xs">@</span>
+                </a>
+            </div>
+            <p class="text-xs mt-4 text-pixel-light/70">&copy; 2025 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Script para menu mobile -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

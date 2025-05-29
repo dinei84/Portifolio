@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim | Portfólio Pixel Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="./css/output.css" rel="stylesheet">
+    <!-- Espaço para futuras bibliotecas de animação como GSAP, AOS ou Framer Motion -->
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-pixel-light border-b-6 border-double border-pixel-dark">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="font-pixel text-xl text-pixel-primary">
+                <span class="animate-pixel-glitch inline-block">DEV</span><span class="text-pixel-dark">PIXEL</span>
+            </a>
+            <div class="hidden md:flex space-x-4">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">Sobre</a>
+                <a href="projects.html" class="nav-link">Projetos</a>
+                <a href="contact.html" class="nav-link">Contato</a>
+            </div>
+            <button class="md:hidden px-2 py-1 pixel-border" id="mobile-menu-button">
+                <div class="w-6 h-0.5 bg-pixel-dark mb-1"></div>
+                <div class="w-6 h-0.5 bg-pixel-dark mb-1"></div>
+                <div class="w-6 h-0.5 bg-pixel-dark"></div>
+            </button>
+        </nav>
+        <!-- Menu mobile -->
+        <div class="hidden md:hidden bg-pixel-light border-t-3 border-dashed border-pixel-dark" id="mobile-menu">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+                <a href="index.html" class="nav-link block py-2">Home</a>
+                <a href="about.html" class="nav-link block py-2">Sobre</a>
+                <a href="projects.html" class="nav-link block py-2">Projetos</a>
+                <a href="contact.html" class="nav-link block py-2">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <section class="max-w-4xl mx-auto">
+            <h1 class="pixel-heading text-2xl md:text-4xl mb-8 text-center">Sobre Mim</h1>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-center md:items-start mb-12">
+                <div class="w-full md:w-1/3">
+                    <div class="pixel-border p-2 animate-pixel-float">
+                        <div class="bg-pixel-secondary w-full aspect-square flex items-center justify-center">
+                            <div class="text-white font-pixel text-xs md:text-sm text-center p-4" aria-label="Foto pixelada do desenvolvedor">
+                                FOTO<br>PIXEL<br>AQUI
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-2/3 pixel-card">
+                    <h2 class="pixel-heading text-xl mb-4">Minha Jornada</h2>
+                    <p class="mb-4">Olá! Sou um desenvolvedor apaixonado por criar experiências digitais únicas. Minha jornada na programação começou quando descobri que poderia transformar ideias em realidade através do código.</p>
+                    <p class="mb-4">Ao longo dos anos, enfrentei diversos desafios que me ajudaram a crescer como profissional. Desde bugs aparentemente impossíveis até projetos complexos com prazos apertados, cada obstáculo superado se tornou um degrau na minha evolução.</p>
+                    <p>O que me motiva é a possibilidade de criar soluções que impactem positivamente a vida das pessoas, combinando funcionalidade com uma experiência visual memorável.</p>
+                </div>
+            </div>
+            
+            <!-- Linha do tempo -->
+            <h2 class="pixel-heading text-xl mb-6 text-center">Minha Linha do Tempo</h2>
+            <div class="space-y-6 mb-12">
+                <div class="pixel-card relative">
+                    <div class="absolute -left-3 -top-3 w-6 h-6 bg-pixel-primary"></div>
+                    <h3 class="font-pixel text-lg mb-2">Primeiro Código</h3>
+                    <p>Meu primeiro "Hello World" marcou o início de tudo. A sensação de ver algo que criei funcionando na tela foi indescritível!</p>
+                </div>
+                
+                <div class="pixel-card relative">
+                    <div class="absolute -left-3 -top-3 w-6 h-6 bg-pixel-accent"></div>
+                    <h3 class="font-pixel text-lg mb-2">Primeiro Projeto</h3>
+                    <p>Desenvolvi meu primeiro projeto completo, enfrentando desafios reais e aprendendo a importância do planejamento e da organização.</p>
+                </div>
+                
+                <div class="pixel-card relative">
+                    <div class="absolute -left-3 -top-3 w-6 h-6 bg-pixel-secondary"></div>
+                    <h3 class="font-pixel text-lg mb-2">Aprendizado Contínuo</h3>
+                    <p>Descobri que na programação, o aprendizado nunca termina. Cada nova tecnologia dominada abre portas para possibilidades ainda mais interessantes.</p>
+                </div>
+                
+                <div class="pixel-card relative">
+                    <div class="absolute -left-3 -top-3 w-6 h-6 bg-pixel-dark"></div>
+                    <h3 class="font-pixel text-lg mb-2">Hoje</h3>
+                    <p>Continuo evoluindo e buscando criar projetos que combinem funcionalidade, acessibilidade e uma estética única.</p>
+                </div>
+            </div>
+            
+            <!-- Habilidades -->
+            <h2 class="pixel-heading text-xl mb-6 text-center">Minhas Habilidades</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                <div class="pixel-card text-center">
+                    <div class="font-pixel text-pixel-primary mb-2">HTML5</div>
+                    <div class="w-full bg-gray-200 h-4 mb-2">
+                        <div class="bg-pixel-primary h-4" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="pixel-card text-center">
+                    <div class="font-pixel text-pixel-primary mb-2">CSS3</div>
+                    <div class="w-full bg-gray-200 h-4 mb-2">
+                        <div class="bg-pixel-primary h-4" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="pixel-card text-center">
+                    <div class="font-pixel text-pixel-primary mb-2">JavaScript</div>
+                    <div class="w-full bg-gray-200 h-4 mb-2">
+                        <div class="bg-pixel-primary h-4" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="pixel-card text-center">
+                    <div class="font-pixel text-pixel-primary mb-2">React</div>
+                    <div class="w-full bg-gray-200 h-4 mb-2">
+                        <div class="bg-pixel-primary h-4" style="width: 75%"></div>
+                    </div>
+                </div>
+                
+                <div class="pixel-card text-center">
+                    <div class="font-pixel text-pixel-primary mb-2">Node.js</div>
+                    <div class="w-full bg-gray-200 h-4 mb-2">
+                        <div class="bg-pixel-primary h-4" style="width: 70%"></div>
+                    </div>
+                </div>
+                
+                <div class="pixel-card text-center">
+                    <div class="font-pixel text-pixel-primary mb-2">UI/UX</div>
+                    <div class="w-full bg-gray-200 h-4 mb-2">
+                        <div class="bg-pixel-primary h-4" style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-pixel-dark text-white py-6 border-t-6 border-double border-pixel-primary">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-pixel text-sm">Feito com ❤️ e muito café pixelado</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-pixel-accent hover:text-pixel-primary transition-colors">
+                    <!-- Ícone GitHub -->
+                    <span class="font-pixel text-xs">GH</span>
+                </a>
+                <a href="#" class="text-pixel-accent hover:text-pixel-primary transition-colors">
+                    <!-- Ícone LinkedIn -->
+                    <span class="font-pixel text-xs">IN</span>
+                </a>
+                <a href="#" class="text-pixel-accent hover:text-pixel-primary transition-colors">
+                    <!-- Ícone Email -->
+                    <span class="font-pixel text-xs">@</span>
+                </a>
+            </div>
+            <p class="text-xs mt-4 text-pixel-light/70">&copy; 2025 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Script para menu mobile -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados para o tema pixel art */
+@layer base {
+  html {
+    @apply font-mono;
+  }
+  
+  body {
+    @apply bg-pixel-light text-pixel-dark;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%234ecdc4' fill-opacity='0.1' fill-rule='evenodd'%3E%3Crect width='4' height='4' x='0' y='0'/%3E%3Crect width='4' height='4' x='10' y='10'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+@layer components {
+  .pixel-border {
+    @apply border-4 border-dashed border-pixel-dark;
+    image-rendering: pixelated;
+  }
+  
+  .pixel-button {
+    @apply px-6 py-3 bg-pixel-primary text-white font-pixel text-sm uppercase tracking-wider 
+           border-3 border-double border-white shadow-md transition-all duration-200
+           hover:bg-pixel-accent hover:text-pixel-dark hover:translate-y-[-2px] hover:shadow-lg
+           active:translate-y-[1px] active:shadow-sm;
+  }
+  
+  .pixel-card {
+    @apply bg-white p-4 border-6 border-double border-pixel-dark shadow-md
+           hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px];
+    image-rendering: pixelated;
+  }
+  
+  .pixel-input {
+    @apply w-full p-3 border-3 border-dashed border-pixel-dark bg-white
+           focus:outline-none focus:border-pixel-primary focus:border-solid;
+  }
+  
+  .nav-link {
+    @apply px-4 py-2 font-pixel text-sm uppercase tracking-wider
+           hover:text-pixel-primary transition-colors duration-200;
+  }
+  
+  .pixel-heading {
+    @apply font-pixel text-pixel-dark uppercase tracking-wider;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Animações pixel art */
+@keyframes pixel-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-pixel-pulse {
+  animation: pixel-pulse 2s infinite;
+}
