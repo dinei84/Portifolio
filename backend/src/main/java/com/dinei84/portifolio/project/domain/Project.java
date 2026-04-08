@@ -33,6 +33,9 @@ public class Project {
     @Column(name = "is_interactive")
     private Boolean isInteractive;
 
+    @Column(name = "is_featured")
+    private Boolean isFeatured;
+
     @Column(columnDefinition = "TEXT")
     private String technologies;
 
@@ -96,6 +99,14 @@ public class Project {
 
     public void setIsInteractive(Boolean interactive) {
         isInteractive = interactive;
+    }
+
+    public Boolean getIsFeatured() {
+        return isFeatured;
+    }
+
+    public void setIsFeatured(Boolean featured) {
+        isFeatured = featured;
     }
 
     public String getTechnologies() {
